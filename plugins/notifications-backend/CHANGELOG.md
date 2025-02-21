@@ -1,5 +1,18 @@
 # @backstage/plugin-notifications-backend
 
+## 0.5.4-next.0
+
+### Patch Changes
+
+- 20e8d12: Fix null topics being returned from notification API
+- 425a61d: Improved notifications router tests
+- Updated dependencies
+  - @backstage/plugin-auth-node@0.6.0
+  - @backstage/backend-plugin-api@1.2.0
+  - @backstage/plugin-catalog-node@1.16.0
+  - @backstage/plugin-events-node@0.4.8
+  - @backstage/plugin-notifications-node@0.2.12
+
 ## 0.5.2
 
 ### Patch Changes
