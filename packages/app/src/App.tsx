@@ -85,6 +85,7 @@ import {
   NotificationsPage,
   UserNotificationSettingsCard,
 } from '@backstage/plugin-notifications';
+import { AiAssistantPage } from '@internal/plugin-ai-assistant';
 
 const app = createApp({
   apis,
@@ -222,6 +223,7 @@ const routes = (
       {customDevToolsPage}
     </Route>
     <Route path="/notifications" element={<NotificationsPage />} />
+    <Route path="/ai-assistant" element={<AiAssistantPage />} />
   </FlatRoutes>
 );
 

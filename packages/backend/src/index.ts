@@ -60,5 +60,6 @@ backend.add(import('@backstage/plugin-techdocs-backend'));
 backend.add(import('@backstage/plugin-signals-backend'));
 backend.add(import('@backstage/plugin-notifications-backend'));
 backend.add(import('./instanceMetadata'));
+backend.add(import('@internal/plugin-ai-assistant-backend'));
 
 backend.start();

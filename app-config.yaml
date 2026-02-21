@@ -61,6 +61,11 @@ backend:
       - host: '*.mozilla.org'
   # workingDirectory: /tmp # Use this to configure a working directory for the scaffolder, defaults to the OS temp-dir
 
+# AI Assistant configuration
+# Set ANTHROPIC_API_KEY environment variable or replace the placeholder below
+aiAssistant:
+  anthropicApiKey: ${ANTHROPIC_API_KEY}
+
 # See README.md in the proxy-backend plugin for information on the configuration format
 proxy:
   endpoints:

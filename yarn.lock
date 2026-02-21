@@ -180,6 +180,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@anthropic-ai/sdk@npm:^0.39.0":
+  version: 0.39.0
+  resolution: "@anthropic-ai/sdk@npm:0.39.0"
+  dependencies:
+    "@types/node": ^18.11.18
+    "@types/node-fetch": ^2.6.4
+    abort-controller: ^3.0.0
+    agentkeepalive: ^4.2.1
+    form-data-encoder: 1.7.2
+    formdata-node: ^4.3.2
+    node-fetch: ^2.6.7
+  checksum: 47f00c9d3ca2d497b25c688cdfd923474e2f16e774f67a3e2ef3f0c24cd80412687e3a2caee3024dd9a5d7a95e0717d85e3ffc9c4ba75ff6f1641d5820394a76
+  languageName: node
+  linkType: hard
+
 "@apidevtools/json-schema-ref-parser@npm:9.0.6":
   version: 9.0.6
   resolution: "@apidevtools/json-schema-ref-parser@npm:9.0.6"
@@ -10424,17 +10439,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@improbable-eng/grpc-web@npm:^0.14.0":
-  version: 0.14.1
-  resolution: "@improbable-eng/grpc-web@npm:0.14.1"
-  dependencies:
-    browser-headers: ^0.4.1
-  peerDependencies:
-    google-protobuf: ^3.14.0
-  checksum: 8a3a6efe4ecb855ff636df634723e795ba97aeb2a3e1eeceb0a82086d1e27dfe1495915e09a29af8be4e4bde1fb0fd39b1d0608f3327d26f41d78df72fe77b53
-  languageName: node
-  linkType: hard
-
 "@improbable-eng/grpc-web@npm:^0.15.0":
   version: 0.15.0
   resolution: "@improbable-eng/grpc-web@npm:0.15.0"
@@ -10515,6 +10519,52 @@ __metadata:
     "@backstage/cli": "workspace:^"
     "@testing-library/jest-dom": ^6.0.0
     "@testing-library/react": ^16.0.0
+  languageName: unknown
+  linkType: soft
+
+"@internal/plugin-ai-assistant-backend@workspace:^, @internal/plugin-ai-assistant-backend@workspace:plugins/ai-assistant-backend":
+  version: 0.0.0-use.local
+  resolution: "@internal/plugin-ai-assistant-backend@workspace:plugins/ai-assistant-backend"
+  dependencies:
+    "@anthropic-ai/sdk": ^0.39.0
+    "@backstage/backend-defaults": "workspace:^"
+    "@backstage/backend-plugin-api": "workspace:^"
+    "@backstage/backend-test-utils": "workspace:^"
+    "@backstage/catalog-client": "workspace:^"
+    "@backstage/catalog-model": "workspace:^"
+    "@backstage/cli": "workspace:^"
+    "@backstage/errors": "workspace:^"
+    "@types/express": ^4.17.6
+    express: ^4.17.1
+    express-promise-router: ^4.1.0
+  languageName: unknown
+  linkType: soft
+
+"@internal/plugin-ai-assistant@workspace:^, @internal/plugin-ai-assistant@workspace:plugins/ai-assistant":
+  version: 0.0.0-use.local
+  resolution: "@internal/plugin-ai-assistant@workspace:plugins/ai-assistant"
+  dependencies:
+    "@backstage/cli": "workspace:^"
+    "@backstage/core-components": "workspace:^"
+    "@backstage/core-plugin-api": "workspace:^"
+    "@material-ui/core": ^4.12.2
+    "@material-ui/icons": ^4.9.1
+    "@testing-library/dom": ^10.0.0
+    "@testing-library/jest-dom": ^6.0.0
+    "@testing-library/react": ^16.0.0
+    "@types/react": ^18.0.0
+    react: ^18.0.2
+    react-dom: ^18.0.2
+    react-router-dom: ^6.3.0
+    react-use: ^17.2.4
+  peerDependencies:
+    "@types/react": ^17.0.0 || ^18.0.0
+    react: ^17.0.0 || ^18.0.0
+    react-dom: ^17.0.0 || ^18.0.0
+    react-router-dom: ^6.3.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -22175,13 +22225,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"GendocuPublicApis@https://git.gendocu.com/gendocu/GendocuPublicApis.git#master":
-  version: 1.0.0
-  resolution: "GendocuPublicApis@https://git.gendocu.com/gendocu/GendocuPublicApis.git#commit=6e8d4c1d2342556a2e8e719f19385b266001ebae"
-  dependencies:
-    "@improbable-eng/grpc-web": ^0.14.0
-    google-protobuf: ^3.15.8
-  checksum: 2c8f28cd89e9a71e5f9df819115a89659d98f22d6e7a6b2f3fc0bc24a4ca954c0112070c00401749dcbcdeeb42ca070d6d8a36b3c205fbf13409fb1110b5966e
+"GendocuPublicApis@npm:noop@^1.0.0":
+  version: 1.0.1
+  resolution: "noop@npm:1.0.1"
+  checksum: 5b73c75a68b7992d501d737f67f7e3d1be8c53b7502ca08b67721e0fa547e748ae8fe644cbf1a9a1e2d227075a0710347c470f46a3d09f422057fe560f8ffb8a
   languageName: node
   linkType: hard
 
@@ -28631,6 +28678,7 @@ __metadata:
     "@backstage/plugin-user-settings": "workspace:^"
     "@backstage/test-utils": "workspace:^"
     "@backstage/theme": "workspace:^"
+    "@internal/plugin-ai-assistant": "workspace:^"
     "@material-ui/core": ^4.12.2
     "@material-ui/icons": ^4.9.1
     "@material-ui/lab": 4.0.0-alpha.61
@@ -28756,6 +28804,7 @@ __metadata:
     "@backstage/plugin-search-backend-node": "workspace:^"
     "@backstage/plugin-signals-backend": "workspace:^"
     "@backstage/plugin-techdocs-backend": "workspace:^"
+    "@internal/plugin-ai-assistant-backend": "workspace:^"
     "@opentelemetry/auto-instrumentations-node": ^0.54.0
     "@opentelemetry/exporter-prometheus": ^0.54.0
     "@opentelemetry/sdk-node": ^0.54.0
@@ -30563,7 +30612,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"google-protobuf@npm:^3.15.8, google-protobuf@npm:^3.21.2":
+"google-protobuf@npm:^3.21.2":
   version: 3.21.2
   resolution: "google-protobuf@npm:3.21.2"
   checksum: 3caa2e1e2654714cc1a201ac5e5faabcaa48f5fba3d8ff9b64ca66fe19e4e0506b94053f32eddc77bf3a7a47ac1660315c6744185c1e2bb27654fd76fe91b988

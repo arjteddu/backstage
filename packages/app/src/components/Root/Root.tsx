@@ -52,6 +52,7 @@ import Score from '@material-ui/icons/Score';
 import { useApp } from '@backstage/core-plugin-api';
 import BuildIcon from '@material-ui/icons/Build';
 import { NotificationsSidebarItem } from '@backstage/plugin-notifications';
+import SmartToyIcon from '@material-ui/icons/Memory';
 
 const useSidebarLogoStyles = makeStyles({
   root: {
@@ -167,6 +168,11 @@ export const Root = ({ children }: PropsWithChildren<{}>) => (
         <SidebarDivider />
         <SidebarDivider />
         <NotificationsSidebarItem />
+        <SidebarItem
+          icon={SmartToyIcon}
+          to="ai-assistant"
+          text="AI Assistant"
+        />
       </SidebarGroup>
       <SidebarSpace />
       <SidebarDivider />
